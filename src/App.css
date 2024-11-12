@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* css variables */
+:root {
+  --primary-color:blueviolet;
+  --heading-color: #fff;
+  --btn-primary-bg: rgba(137, 43, 226, 0.918);
+  --btn-secondary-bg: rgb(54, 28, 78);
+  --team-card-bg: #431e5a;
+  --link-color: #fff;
+  --link-active: #379cf6;
+  --card-bg: linear-gradient(
+    45deg,
+    #4d1d69 33%,
+    hsl(278, 60%, 24%) 52%,
+    #310b4a 84%
+  );
+  --counter-color: linear-gradient(
+    90deg,
+    #d391fa 30%,
+    #c364fa 55%,
+    #a230ed 75%
+  );
+  --body-bg: rgba(6, 11, 26, 1);
+  --newsletter-bg: linear-gradient(
+    90deg,
+    rgb(81, 9, 115) 20%,
+    rgb(79, 9, 96) 38%,
+    rgb(59, 9, 81) 100%
+  );
+  --testimonial-bg: #48105af7;
+  --font-name: "Roboto", sans-serif;
+  --small-text-color: rgba(255, 255, 255, 0.774);
+  --icon-bg:#4a156d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.light-theme {
+  --body-bg: rgb(255, 255, 255);
+  --heading-color: #0c123d;
+  --btn-secondary-bg: #816aff;
+  --btn-primary-bg: #fff;
+  --primary-color: #816aff;
+  --counter-color: #fff;
+  --counter-section-bg: #b358fd;
+  --link-color: #0c123d;
+  --link-active: #816aff
+  --newsletter-bg: linear-gradient(
+    180deg,
+    rgba(189, 243, 255, 1) 29%,
+    rgba(193, 243, 255, 1) 50%,
+    rgba(226, 250, 255, 1) 78%
+  );
+  --small-text-color:#000;
+  --card-bg:#fff;
+  --testimonial-bg: #f7f7f7;
+  --team-card-bg: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+   background-color: var(--body-bg);
+   font-family: var(--font-name);
+}
+
+a{
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+h1,h2{
+  color: var(--heading-color);
+  font-size: 2rem;
+}
+
+section{
+  padding: 60px 0px;
+}
+
+.container{
+  max-width: 1140px;
+  padding: 0px 15px;
+  margin: auto;
+}
+
+.description{
+  color: var(--small-text-color);
+  padding: 10px 0px;
+  line-height: 20px;
+  font-size: 0.9rem;
+}
+
+.subtitle{
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.light-theme .counter{
+  background: var(--counter-section-bg);
+}
+
+.light-theme .secondary__btn{
+  border: 1px solid var(--primary-color);
+  color: #4d1d69;
+  font-weight: 600;
+}
+
+.light-theme a{
+  font-weight: 500;
+}
+
+.light-theme .team__img{
+  background: #ddd;
+}
+
+
+@media only screen and (max-width:1024px){
+  .container{
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width:768px){
+  section{
+    padding: 40px 0px;
   }
 }
+
+
